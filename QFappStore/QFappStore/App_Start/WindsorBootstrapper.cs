@@ -11,7 +11,7 @@ namespace QFappStore.App_Start
         public static void PreStart()
         {
             var container = new WindsorContainer();
-            container.Register(Component.For<IWindsorContainer>().Instance(container));
+            container.Install(new DataAccessInstaller());
             container.Install(new CoreInstaller());
             container.Install(new ControllerInstaller());
         }

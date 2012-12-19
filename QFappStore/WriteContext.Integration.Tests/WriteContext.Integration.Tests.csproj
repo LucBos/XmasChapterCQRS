@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D8C364D6-3732-4E57-B714-187477057BD2}</ProjectGuid>
+    <ProjectGuid>{A4B54C8C-1041-4E64-ACB1-1CFC0A5BF141}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Core</RootNamespace>
-    <AssemblyName>Core</AssemblyName>
+    <RootNamespace>WriteContext.Integration.Tests</RootNamespace>
+    <AssemblyName>WriteContext.Integration.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -42,27 +41,16 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="xunit">
+      <HintPath>..\packages\xunit.1.9.1\lib\net20\xunit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetDemoData\GetDemoDataResult.cs" />
-    <Compile Include="GetDemoData\GetPersonFirstOrderAndOrderlineProducts.cs" />
-    <Compile Include="GetDemoData\IGetDemoDataHandler.cs" />
-    <Compile Include="GetDemoData\IGetReviewsWithPersonNameQuery.cs" />
-    <Compile Include="ICommand.cs" />
-    <Compile Include="ICommandHandler.cs" />
-    <Compile Include="IDatabaseQuery.cs" />
-    <Compile Include="IQueryHandler.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{72280F0D-D0DB-46B0-A39C-35AC7B447AB9}</Project>
-      <Name>DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{6FBA13E2-E94B-4BD1-B4AE-F762EEC81659}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

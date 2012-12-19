@@ -40,6 +40,7 @@
     <Reference Include="Castle.Windsor">
       <HintPath>..\packages\Castle.Windsor.3.1.0\lib\net40\Castle.Windsor.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -74,9 +75,12 @@
   <ItemGroup>
     <Compile Include="App_Start\ControllerInstaller.cs" />
     <Compile Include="App_Start\CoreInstaller.cs" />
+    <Compile Include="App_Start\DataAccessInstaller.cs" />
     <Compile Include="App_Start\WindsorBootstrapper.cs" />
     <Compile Include="App_Start\WindsorControllerFactory.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -88,6 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Views\Demo\Index.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -123,6 +129,10 @@
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{D8C364D6-3732-4E57-B714-187477057BD2}</Project>
       <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{72280F0D-D0DB-46B0-A39C-35AC7B447AB9}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
