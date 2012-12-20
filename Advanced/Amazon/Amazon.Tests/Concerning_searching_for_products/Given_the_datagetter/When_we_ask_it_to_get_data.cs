@@ -53,34 +53,36 @@ namespace Amazon.Tests.Concerning_searching_for_products.Given_the_datagetter
         }
     }
 
-    public interface IQuery<out TResult>
-    {
-        TResult Fetch();
-    }
-
-
-    public interface IQueryLocator
-    {
-        IQuery<T> Resolve<T>();
-    }
 
     public class SomeType
     {
     }
-
-    public class DataGetter : IGetData
-    {
-        private readonly IQueryLocator _serviceLocator;
-
-        public DataGetter(IQueryLocator serviceLocator)
-        {
-            _serviceLocator = serviceLocator;
-        }
-
-        public T Get<T>()
-        {
-            var query = _serviceLocator.Resolve<T>();
-            return query.Fetch();
-        }
-    }
 }
+
+////some thoughts
+
+//var customer = _queruCust.Get(id);
+//var products = _queryP.Get(ids);
+
+//foreach (var p in products)
+//{
+//    var orderline = new Orderline()
+//}
+
+
+//// ander geval => handler
+
+//var cust = _queryCust.Get();
+//cust.Buy(products);
+
+//stockUpdater.UpdateFor(prods);
+
+//session.Save();
+
+//// ander geval => events
+//var cust = _queryCust.Get();
+//cust.Buy(products);
+
+////// customer.Buy
+//do whatever
+//messageBus.Publish(new ProductHasBeenBought(this.id, qty, product.id))
