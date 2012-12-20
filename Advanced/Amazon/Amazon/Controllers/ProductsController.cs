@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace Amazon.Controllers
 {
-    public class ProductsController
+    public class ProductsController : Controller
     {
         private readonly IGetData _getData;
 
@@ -11,9 +12,11 @@ namespace Amazon.Controllers
             _getData = getData;
         }
 
-        public void Search()
+        public ActionResult Search()
         {
-            _getData.Get<IEnumerable<Product>>();
+            var returnedProducts = _getData.Get<IEnumerable<Product>>();
+
+            return View(returnedProducts);
         }
     }
 }
