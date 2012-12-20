@@ -15,7 +15,6 @@ namespace Amazon.Controllers
         public ActionResult Search()
         {
             var returnedProducts = _getData.Get<IEnumerable<Product>>();
-
             return View(returnedProducts);
         }
     }

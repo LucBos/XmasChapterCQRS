@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concerning_searching_for_products\Given_the_datagetter\When_we_ask_it_to_get_data.cs" />
     <Compile Include="Concerning_searching_for_products\Given_the_product_controller\When_we_ask_it_to_search_for_products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

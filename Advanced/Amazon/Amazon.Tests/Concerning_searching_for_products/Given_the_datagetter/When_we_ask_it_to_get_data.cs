@@ -9,12 +9,15 @@ namespace Amazon.Tests.Concerning_searching_for_products.Given_the_datagetter
         private Mock<IQueryLocator> _serviceLocator;
         private DataGetter _sut;
         private Mock<IQuery<SomeType>> _query;
+        private SomeType _expectedResult;
+        private SomeType _actualResult;
 
         [TestFixtureSetUp]
         public void Arrange()
         {
+            _expectedResult = new SomeType();
             _query = new Mock<IQuery<SomeType>>();
-
+            _query.Setup(q => q.Fetch()).Returns(_expectedResult);
             _serviceLocator = new Mock<IQueryLocator>();
             _serviceLocator
                 .Setup(l => l.Resolve<SomeType>())
@@ -28,11 +31,11 @@ namespace Amazon.Tests.Concerning_searching_for_products.Given_the_datagetter
 
         private void Act()
         {
-            _sut.Get<SomeType>();
+            _actualResult = _sut.Get<SomeType>();
         }
 
         [Test]
-         public void It_should_ask_for_the_correct_handler_from_the_service_locator()
+        public void It_should_ask_for_the_correct_handler_from_the_service_locator()
         {
             _serviceLocator.Verify(sl => sl.Resolve<SomeType>());
         }
@@ -41,6 +44,12 @@ namespace Amazon.Tests.Concerning_searching_for_products.Given_the_datagetter
         public void It_should_invoke_the_resolved_query()
         {
             _query.Verify(q => q.Fetch());
+        }
+
+        [Test]
+        public void Then_the_correct_result_should_be_returned()
+        {
+            Assert.AreEqual(_expectedResult, _actualResult);
         }
     }
 
@@ -70,8 +79,8 @@ namespace Amazon.Tests.Concerning_searching_for_products.Given_the_datagetter
 
         public T Get<T>()
         {
-            _serviceLocator.Resolve<T>();
-            return default(T);
+            var query = _serviceLocator.Resolve<T>();
+            return query.Fetch();
         }
     }
 }
