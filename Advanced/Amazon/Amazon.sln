@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon", "Amazon\Amazon.csproj", "{DF344E25-CFA4-4677-8BFE-76325FFD5CAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.Tests", "Amazon.Tests\Amazon.Tests.csproj", "{687260DB-6287-4854-BD2E-3D201B66FC4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF344E25-CFA4-4677-8BFE-76325FFD5CAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF344E25-CFA4-4677-8BFE-76325FFD5CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF344E25-CFA4-4677-8BFE-76325FFD5CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF344E25-CFA4-4677-8BFE-76325FFD5CAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{687260DB-6287-4854-BD2E-3D201B66FC4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{687260DB-6287-4854-BD2E-3D201B66FC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{687260DB-6287-4854-BD2E-3D201B66FC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{687260DB-6287-4854-BD2E-3D201B66FC4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
