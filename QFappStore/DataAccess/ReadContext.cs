@@ -13,7 +13,7 @@ namespace DataAccess
             Configuration.LazyLoadingEnabled = false;
         }
 
-        public DbSet<GetReviewsWithPersonName> GetReviewsWithPersonName { get; set; }
+        public DbSet<ReviewsWithPersonName> GetReviewsWithPersonName { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

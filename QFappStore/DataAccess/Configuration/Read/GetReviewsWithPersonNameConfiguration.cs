@@ -3,11 +3,11 @@ using Domain;
 
 namespace DataAccess.Configuration.Read
 {
-    public class GetReviewsWithPersonNameConfiguration : EntityTypeConfiguration<GetReviewsWithPersonName>
+    public class GetReviewsWithPersonNameConfiguration : EntityTypeConfiguration<ReviewsWithPersonName>
     {
         public GetReviewsWithPersonNameConfiguration()
         {
-            ToTable("GetReviewsWithPersonName");
+            ToTable("ReviewsWithPersonName");
         } 
     }
 }

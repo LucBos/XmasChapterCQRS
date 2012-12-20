@@ -5,6 +5,6 @@ namespace Core.GetDemoData
 {
     public interface IGetReviewsWithPersonNameQuery : IDatabaseQuery
     {
-        IEnumerable<GetReviewsWithPersonName> Execute();
+        IEnumerable<ReviewsWithPersonName> Execute();
     }
 }

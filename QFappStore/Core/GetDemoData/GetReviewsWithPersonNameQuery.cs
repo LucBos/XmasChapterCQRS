@@ -14,7 +14,7 @@ namespace Core.GetDemoData
             _readContext = readContext;
         }
 
-        public IEnumerable<GetReviewsWithPersonName> Execute()
+        public IEnumerable<ReviewsWithPersonName> Execute()
         {
             return _readContext.GetReviewsWithPersonName.ToList();
         }

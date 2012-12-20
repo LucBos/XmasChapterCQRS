@@ -1,6 +1,7 @@
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using DataAccess.Configuration;
+using DataAccess.Configuration.Write;
 using Domain;
 
 namespace DataAccess

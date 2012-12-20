@@ -45,8 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GetDemoData\GetDemoDataResult.cs" />
-    <Compile Include="GetDemoData\GetPersonFirstOrderAndOrderlineProducts.cs" />
-    <Compile Include="GetDemoData\IGetDemoDataHandler.cs" />
+    <Compile Include="GetDemoData\GetReviewsWithPersonNameQuery.cs" />
+    <Compile Include="GetDemoData\GetDemoDataQueryHandler.cs" />
+    <Compile Include="GetDemoData\IGetDemoDataQueryHandler.cs" />
     <Compile Include="GetDemoData\IGetReviewsWithPersonNameQuery.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="ICommandHandler.cs" />

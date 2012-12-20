@@ -2,11 +2,6 @@ using System.Linq;
 
 namespace Core.GetDemoData
 {
-    public interface IGetDemoDataQueryHandler : IQueryHandler
-    {
-        GetDemoDataResult Execute();
-    }
-
     public class GetDemoDataQueryHandler : IGetDemoDataQueryHandler
     {
         private readonly IGetReviewsWithPersonNameQuery _getReviewsWithPersonNameQuery;

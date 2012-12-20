@@ -12,18 +12,18 @@ namespace Core.Unit.Tests.GetDemoData
     {
         private Mock<IGetReviewsWithPersonNameQuery> _getReviewsQuery;
         private GetDemoDataQueryHandler _queryHandler;
-        private List<GetReviewsWithPersonName> _getReviewsQueryResult;
+        private List<ReviewsWithPersonName> _getReviewsQueryResult;
 
         [SetUp]
         public void Setup()
         {
             _getReviewsQuery = new Mock<IGetReviewsWithPersonNameQuery>();
-            _getReviewsQueryResult = new List<GetReviewsWithPersonName>()
+            _getReviewsQueryResult = new List<ReviewsWithPersonName>()
                 {
-                    new GetReviewsWithPersonName(){Comment = "a",FirstName = "b",Id = Guid.NewGuid(),NrOfStars = 1},
-                    new GetReviewsWithPersonName(){Comment = "c",FirstName = "d",Id = Guid.NewGuid(),NrOfStars = 2},
-                    new GetReviewsWithPersonName(){Comment = "e",FirstName = "f",Id = Guid.NewGuid(),NrOfStars = 3},
-                    new GetReviewsWithPersonName(){Comment = "g",FirstName = "h",Id = Guid.NewGuid(),NrOfStars = 4}
+                    new ReviewsWithPersonName(){Comment = "a",FirstName = "b",Id = Guid.NewGuid(),NrOfStars = 1},
+                    new ReviewsWithPersonName(){Comment = "c",FirstName = "d",Id = Guid.NewGuid(),NrOfStars = 2},
+                    new ReviewsWithPersonName(){Comment = "e",FirstName = "f",Id = Guid.NewGuid(),NrOfStars = 3},
+                    new ReviewsWithPersonName(){Comment = "g",FirstName = "h",Id = Guid.NewGuid(),NrOfStars = 4}
                 };
             _getReviewsQuery.Setup(x => x.Execute()).Returns(_getReviewsQueryResult);
             _queryHandler = new GetDemoDataQueryHandler(_getReviewsQuery.Object);

@@ -29,10 +29,5 @@ namespace QFappStore.Controllers
             get { return _queryHandlerLocator; }
         }
 
-        //public ActionResult bla()
-        //{
-        //    return Handle(null,
-        //        () => View());
-        //}
     }
 }

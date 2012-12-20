@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity.ModelConfiguration;
 using Domain;
 
-namespace DataAccess.Configuration
+namespace DataAccess.Configuration.Write
 {
     public class PersonConfiguration: EntityTypeConfiguration<Person>
     {

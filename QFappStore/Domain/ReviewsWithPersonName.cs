@@ -2,7 +2,7 @@ using System;
 
 namespace Domain
 {
-    public class GetReviewsWithPersonName
+    public class ReviewsWithPersonName
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; }
